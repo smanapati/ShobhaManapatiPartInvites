@@ -1,0 +1,36 @@
+﻿@model ShobhaManapatiPartInvites.Models.GuestResponse
+@{ Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm</title>
+    <link href="/css/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <form asp-action="RsvpForm" method="post" class="form-control text-center">
+        <div class="form-group">
+            <label asp-for="Name">Your name:</label>
+            <input asp-for="Name" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Email">Your email:</label>
+            <input asp-for="Email" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Phone">Your phone:</label>
+            <input asp-for="Phone" />
+        </div>
+        <div class="form-group">
+            <label>Will you attend?</label>
+            <select asp-for="WillAttend">
+                <option value="">Choose an option</option>
+                <option value="true">Yes, I'll be there</option>
+                <option value="false">No, I can't come</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success">Submit RSVP</button>
+    </form>
+</body>
+</html>

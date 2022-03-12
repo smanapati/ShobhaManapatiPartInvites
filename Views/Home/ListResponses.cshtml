@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ShobhaManapatiPartInvites.Models.GuestResponse>
+@{ Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Responses</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <h2>Here is the list of people attending the party</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr><th>Name</th><th>Email</th><th>Phone</th></tr>
+        </thead>
+        <tbody>
+            @foreach (ShobhaManapatiPartInvites.Models.GuestResponse r in Model)
+            {
+<tr>
+    <td>@r.Name</td>
+    <td>@r.Email</td>
+    <td>@r.Phone</td>
+</tr>            }
+        </tbody>
+    </table>
+</body>
+</html>

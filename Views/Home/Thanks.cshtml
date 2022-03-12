@@ -1,0 +1,24 @@
+﻿@model ShobhaManapatiPartInvites.Models.GuestResponse
+@{ Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body class="text-center">
+    <div>
+        <h1>Thank you, @Model.Name!</h1>
+        @if (Model.WillAttend == true)
+        {
+@:It's great that you're coming. I look forward to seeing you!
+}
+else
+{
+@:Sorry to hear that you can't make it, but thanks for letting us know.
+}
+    </div>
+    Click <a asp-action="ListResponses">here</a> to see who is coming.
+</body>
+</html>
